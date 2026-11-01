@@ -59,26 +59,26 @@ O projeto foi estruturado seguindo os princípios de **Domain-Driven Design (DDD
 ```mermaid
 graph TD
     subgraph Presentation ["Presentation Layer (React)"]
-        UI[App / Navbar / Modais]
-        Editor[EditorView / DayEditor / CoverEditor]
-        PDF[PdfDocument / PageCover / PageWorkoutDay]
+        UI["App / Navbar / Modais"]
+        Editor["EditorView / DayEditor / CoverEditor"]
+        PDF["PdfDocument / PageCover / PageWorkoutDay"]
     end
 
     subgraph Application ["Application Layer (Hooks)"]
-        usePlan[useWorkoutPlan]
-        useExport[usePdfExport]
+        usePlan["useWorkoutPlan"]
+        useExport["usePdfExport"]
     end
 
     subgraph Domain ["Domain Layer (Core)"]
-        Entities[WorkoutPlan / Day / Exercise / Trainer]
-        Services[WorkoutPlanService / TrainerService]
+        Entities["WorkoutPlan / Day / Exercise / Trainer"]
+        Services["WorkoutPlanService / TrainerService"]
     end
 
     subgraph Infrastructure ["Infrastructure Layer (Adapters)"]
-        Storage[LocalStorageWorkoutRepository]
-        Export[PdfExportService (html2pdf)]
-        Sanitizer[ColorSanitizer]
-        Log[Logger]
+        Storage["LocalStorageWorkoutRepository"]
+        Export["PdfExportService (html2pdf)"]
+        Sanitizer["ColorSanitizer"]
+        Log["Logger"]
     end
 
     Presentation --> Application
