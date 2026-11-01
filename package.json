@@ -13,6 +13,7 @@
     "postinstall": "node scripts/patch-html2canvas.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "html2pdf.js": "^0.14.0",
     "lucide-react": "^1.64.0",
